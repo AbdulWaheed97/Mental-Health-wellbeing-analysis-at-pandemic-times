@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: Century Gothic;
+        }
+        header {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://c4.wallpaperflare.com/wallpaper/714/108/49/children-wallpaper-preview.jpg");
+            height: 100vh;
+            background-size: cover;
+            background-position: center;
+        }
+        .logo img{
+            float: left;
+            width: 160px;
+            height: auto;
+            padding: 25px
+        }
+        .main {
+            max-width: 1435px;
+            margin: auto;
+        }
+        ul {
+            float: right;
+            list-style-type: none;
+            margin-top: 25px;
+        }
+
+        ul li {
+            display: inline-block;
+            padding: 10px;
+        }
+
+        ul li a {
+            text-decoration: none;
+            color: white;
+            padding: 5px 20px;
+            border: 1px solid transparent;
+            transition: 0.6s ease;
+        }
+
+        ul li a:hover {
+            background-color: white;
+            color: #000;
+        }
+        .dropdown{
+            position: absolute;
+            top: 45%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border: 5px solid white;
+            padding: 10px 30px;
+            color: white;
+            text-decoration: none;
+        }
+        input[type=button], input[type=submit]{
+            background-color: transparent ;
+            border: none solid transparent;
+            transition: 0.6s ease;
+            color: white;
+            padding: 16px 32px;
+            text-decoration: none;
+            margin: 4px 4px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 16px;
+
+        }
+        input[type=button], input[type=submit]:hover{
+            background-color: white;
+            color: #000;
+        }
+        #submission{
+            text-align: center;
+        }
+        
+        .title {
+            position: absolute;
+            top: 12%;
+            left: 20%;
+        }
+        
+        .title h1 {
+            color: white;
+            font-size: 50px;
+            border: 5px solid white;
+            padding: 10px
+        }
+
+    </style>
+    <title>Home</title>
+</head>
+<body>
+    <header>
+        <div class="main">
+            <div class="logo">
+                <img
+                    src="https://innodatatics.ai/assets/innodatatics-white1.png">
+            </div>
+            <ul>
+                <li><a href="/">Home</a></li>
+            </ul>
+        </div>
+        
+        <div class="title">
+            <h1> Child Emotional and Behavioural Analysis</h1>
+        </div>
+        
+        <div class="dropdown">
+            <form action="/Output" method="post">
+                <label for="analysis"><h2 style="text-align: center;">Select the type of analysis:</h2></label><br>
+                <h3 style="text-align: center;"> <select name="analysis" id="analysis">
+                  <option value="select">Select</option>
+                  <option value="Behaviour">Behavioural Analysis</option>
+                  <option value="Emotion">Emotional Analysis</option>
+                </select></h3>
+                <br><br>
+                <p id="submission"><input type="submit" value="Proceed"></p>
+              </form>
+              
+          </div>
+
+    </header>
+
+</body>
+</html>
